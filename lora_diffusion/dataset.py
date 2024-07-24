@@ -181,9 +181,10 @@ class PivotalTuningDatasetCapation(Dataset):
             )
 
             self.instance_images_path = list(set(possibily_src_images))
-            self.captions = [
-                x.split("/")[-1].split(".")[0] for x in self.instance_images_path
-            ]
+            self.captions = open(f"{instance_data_root}/caption.txt").readlines()
+            # self.captions = [
+            #     x.split("/")[-1].split(".")[0] for x in self.instance_images_path
+            # ]
 
         assert (
             len(self.instance_images_path) > 0
