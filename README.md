@@ -17,7 +17,7 @@ self.captions = open(f"{instance_data_root}/caption.txt").readlines()
 
 ## Train.sh
 
-To define the directories and execute lora_pti.py with hyperparameters, used a shell script.
+To define the directories and execute lora_pti.py with hyperparameters, used a shell script.  
 INSTANCE_DIR, OUTPUT_DIR, --use_template <-- were modified
 
 ```bash
@@ -58,11 +58,11 @@ lora_pti \
 
 ## Img2img inference
 
-For ineference.
-1 Base SD model
-2 apply LoRA
-3 turn off unet & text_encoder
-4 scale unet & text_encoder to 0.7
+For ineference.  
+1 Base SD model  
+2 apply LoRA  
+3 turn off unet & text_encoder  
+4 scale unet & text_encoder to 0.7  
 
 ```python
 from diffusers import StableDiffusionImg2ImgPipeline
